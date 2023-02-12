@@ -53,15 +53,24 @@ $(document).ready(function() {
   $("#signupbutton").click(function() {
     if($("#fn").val()=="" || $("#mi").val()=="" || $("#ln").val()=="") {
       $("#name").addClass("error");
+      if($("#fn").val()==""){
+        alert("First Name is Empty!");
+      }
+      else if($("#mi").val()==""){
+        alert("Middle Name is Empty!");
+      }
+      else if($("#ln").val()==""){
+        alert("Last Name is Empty!");
+      }
 
-      return;
+        return;
     } else {
       $("#name").removeClass("error");
     }
 
     if($("#em").val()=="") {
       $("#email").addClass("error");
-
+      alert("Email is Empty!");
       return;
     } else {
       $("#name").removeClass("error");
